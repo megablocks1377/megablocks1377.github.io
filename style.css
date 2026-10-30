@@ -1,1108 +1,940 @@
-/* ========================================
-   GLOBAL RESET
-======================================== */
+<!DOCTYPE html>
+<html lang="en">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-html {
-    scroll-behavior: smooth;
-}
+    <title>Alan Davila | Computer Engineering Portfolio</title>
 
+    <meta
+        name="description"
+        content="Alan Davila's engineering portfolio featuring embedded systems, controls and automation, power electronics, digital hardware, and software projects."
+    >
 
-body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+    <link rel="stylesheet" href="style.css?v=11">
+</head>
 
-    background: #f8fafc;
 
-    color: #1e293b;
+<body>
 
-    line-height: 1.7;
-}
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
+    <nav class="navbar">
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+        <div class="nav-container">
 
+            <a href="#home" class="logo">
+                AD
+            </a>
 
-/* ========================================
-   NAVIGATION
-======================================== */
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#resumes">Resumes</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-.navbar {
-    position: sticky;
+        </div>
 
-    top: 0;
+    </nav>
 
-    z-index: 1000;
 
-    background:
-        rgba(15, 23, 42, 0.97);
+    <!-- =========================
+         HERO
+    ========================== -->
 
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.1);
-}
+    <header class="hero" id="home">
 
+        <div class="hero-content">
 
-.nav-container {
-    max-width: 1150px;
+            <p class="hero-label">
+                COMPUTER ENGINEERING
+            </p>
 
-    margin: auto;
+            <h1>
+                Alan Davila
+            </h1>
 
-    min-height: 70px;
+            <h2>
+                Embedded Systems • Controls & Automation • Power Electronics
+            </h2>
 
-    padding: 0 30px;
+            <p class="hero-description">
+                Computer Engineering student at Texas A&M University
+                building hands-on systems across embedded control,
+                industrial automation, electronics, and hardware-software
+                integration.
+            </p>
 
-    display: flex;
+            <p class="hero-status">
+                B.S. Computer Engineering • Graduating December 2026
+            </p>
 
-    justify-content: space-between;
+            <div class="hero-buttons">
 
-    align-items: center;
-}
+                <a
+                    href="#projects"
+                    class="button primary-button"
+                >
+                    Explore Projects
+                </a>
 
+                <a
+                    href="#resumes"
+                    class="button secondary-button"
+                >
+                    View Resumes
+                </a>
 
-.logo {
-    display: flex;
+            </div>
 
-    justify-content: center;
+        </div>
 
-    align-items: center;
+    </header>
 
-    width: 42px;
 
-    height: 42px;
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-    border-radius: 8px;
+    <section class="section" id="about">
 
-    background: #2563eb;
+        <div class="section-container">
 
-    color: white;
+            <p class="section-label">
+                ABOUT
+            </p>
 
-    font-size: 1rem;
+            <h2 class="section-title">
+                Engineer. Builder. Problem Solver.
+            </h2>
 
-    font-weight: 700;
-}
+            <div class="about-grid">
 
+                <div class="about-text">
 
-.nav-links {
-    display: flex;
+                    <p>
+                        I am a Computer Engineering student at Texas A&M
+                        University focused on embedded systems, controls
+                        and automation, digital hardware, and power
+                        electronics.
+                    </p>
 
-    gap: 30px;
-}
+                    <p>
+                        My path into engineering was not completely linear.
+                        After spending time away from school, I returned
+                        determined to finish what I started and continue
+                        building the technical foundation needed to become
+                        an engineer.
+                    </p>
 
+                    <p>
+                        Today, my projects span PLC automation, embedded
+                        motor control, power conversion, desktop software,
+                        database systems, and hardware-software integration.
+                    </p>
 
-.nav-links a {
-    color: #cbd5e1;
+                    <p>
+                        I enjoy taking systems from an initial idea through
+                        design, implementation, testing, debugging, and
+                        documentation.
+                    </p>
 
-    font-size: 0.95rem;
+                </div>
 
-    font-weight: 500;
 
-    transition:
-        color 0.2s ease;
-}
+                <div class="quick-info">
 
+                    <div class="info-item">
+                        <span class="info-title">University</span>
+                        <span>Texas A&M University</span>
+                    </div>
 
-.nav-links a:hover {
-    color: white;
-}
+                    <div class="info-item">
+                        <span class="info-title">Degree</span>
+                        <span>B.S. Computer Engineering</span>
+                    </div>
 
+                    <div class="info-item">
+                        <span class="info-title">Graduation</span>
+                        <span>December 2026</span>
+                    </div>
 
-/* ========================================
-   HERO
-======================================== */
+                    <div class="info-item">
+                        <span class="info-title">Focus</span>
+                        <span>Embedded • Controls • Power • Hardware</span>
+                    </div>
 
-.hero {
-    position: relative;
+                    <div class="info-item">
+                        <span class="info-title">GitHub</span>
+                        <a
+                            href="https://github.com/megablocks1377"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            megablocks1377
+                        </a>
+                    </div>
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(8, 12, 32, 0.96) 0%,
-            rgba(15, 23, 58, 0.91) 45%,
-            rgba(23, 37, 84, 0.78) 100%
-        ),
-        url("images/drawer-background.jpg");
+                </div>
 
-    background-size: cover;
+            </div>
 
-    background-position: center;
+        </div>
 
-    background-repeat: no-repeat;
+    </section>
 
-    color: white;
-}
 
+    <!-- =========================
+         FEATURED PROJECTS
+    ========================== -->
 
-.hero-content {
-    position: relative;
+    <section
+        class="section projects-section"
+        id="projects"
+    >
 
-    z-index: 1;
+        <div class="section-container">
 
-    max-width: 1150px;
+            <p class="section-label">
+                FEATURED ENGINEERING PROJECTS
+            </p>
 
-    margin: auto;
+            <h2 class="section-title">
+                Systems I've Built
+            </h2>
 
-    min-height: 620px;
+            <p class="section-description">
+                Selected projects demonstrating controls, embedded
+                development, power electronics, testing, and
+                hardware-software integration.
+            </p>
 
-    padding: 120px 30px;
 
-    display: flex;
+            <div class="featured-project-grid">
 
-    flex-direction: column;
 
-    justify-content: center;
-}
+                <!-- PLC PROJECT -->
 
+                <article class="visual-project-card">
 
-.hero-label {
-    color: #60a5fa;
+                    <div class="project-image plc-image">
+                        <div class="project-image-label">
+                            CONTROLS & AUTOMATION
+                        </div>
+                    </div>
 
-    font-size: 0.85rem;
+                    <div class="visual-project-content">
 
-    font-weight: 700;
+                        <div class="project-topline">
+                            <span>PROJECT 01</span>
+                            <span class="complete-dot">COMPLETED</span>
+                        </div>
 
-    letter-spacing: 0.16em;
+                        <h3>
+                            PLC Conveyor Control & HMI System
+                        </h3>
 
-    margin-bottom: 15px;
-}
+                        <p>
+                            Designed and tested a simulated industrial
+                            conveyor control system using IEC 61131-3
+                            ladder logic, OpenPLC Runtime, FUXA-style
+                            operator interface development, and
+                            industrial control concepts such as sensor
+                            interlocks, manual/automatic modes, and
+                            jam-fault logic.
+                        </p>
 
+                        <div class="result-strip">
 
-.hero h1 {
-    font-size:
-        clamp(3.5rem, 8vw, 6.5rem);
+                            <div>
+                                <strong>2</strong>
+                                <span>Operating Modes</span>
+                            </div>
 
-    line-height: 1;
+                            <div>
+                                <strong>5 s</strong>
+                                <span>Jam Timer</span>
+                            </div>
 
-    letter-spacing: -0.05em;
+                            <div>
+                                <strong>Count Logic</strong>
+                                <span>Parts Tracked</span>
+                            </div>
 
-    margin-bottom: 25px;
-}
+                        </div>
 
+                        <div class="technology-list">
+                            <span>OpenPLC</span>
+                            <span>Ladder Logic</span>
+                            <span>IEC 61131-3</span>
+                            <span>HMI</span>
+                            <span>TON Timer</span>
+                            <span>CTU Counter</span>
+                        </div>
 
-.hero h2 {
-    max-width: 950px;
+                        <div class="project-action-row">
+                            <a
+                                href="projects/plc-conveyor.html"
+                                class="project-main-link"
+                            >
+                                View Project →
+                            </a>
+                        </div>
 
-    font-size:
-        clamp(1.3rem, 3vw, 2rem);
+                    </div>
 
-    font-weight: 400;
+                </article>
 
-    color: #cbd5e1;
 
-    margin-bottom: 30px;
-}
+                <!-- ARDUINO DRAWER -->
 
+                <article class="visual-project-card">
 
-.hero-description {
-    max-width: 700px;
+                    <div class="project-image arduino-image">
+                        <div class="project-image-label">
+                            EMBEDDED CONTROL
+                        </div>
+                    </div>
 
-    color: #cbd5e1;
+                    <div class="visual-project-content">
 
-    font-size: 1.1rem;
+                        <div class="project-topline">
+                            <span>PROJECT 02</span>
+                            <span class="complete-dot">COMPLETED</span>
+                        </div>
 
-    margin-bottom: 38px;
-}
+                        <h3>
+                            Arduino Closed-Loop Drawer Controller
+                        </h3>
 
+                        <p>
+                            Built a dual-motor positioning controller
+                            using encoder feedback, limit switches,
+                            motor drivers, and closed-loop position
+                            control.
+                        </p>
 
-.hero-buttons {
-    display: flex;
+                        <div class="result-strip">
 
-    gap: 15px;
+                            <div>
+                                <strong>3</strong>
+                                <span>Target Positions</span>
+                            </div>
 
-    flex-wrap: wrap;
-}
+                            <div>
+                                <strong>2</strong>
+                                <span>Controlled Motors</span>
+                            </div>
 
+                            <div>
+                                <strong>Closed Loop</strong>
+                                <span>Encoder Feedback</span>
+                            </div>
 
-/* ========================================
-   BUTTONS
-======================================== */
+                        </div>
 
-.button {
-    display: inline-block;
+                        <div class="technology-list">
+                            <span>C++</span>
+                            <span>Arduino UNO R4</span>
+                            <span>Encoders</span>
+                            <span>Limit Switches</span>
+                            <span>IBT-2</span>
+                        </div>
 
-    padding: 13px 23px;
+                    </div>
 
-    border-radius: 7px;
+                </article>
 
-    font-weight: 600;
 
-    font-size: 0.95rem;
+                <!-- POWER SUPPLY -->
 
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
+                <article class="visual-project-card">
 
+                    <div class="project-image power-image">
+                        <div class="project-image-label">
+                            POWER ELECTRONICS
+                        </div>
+                    </div>
 
-.button:hover {
-    transform: translateY(-2px);
-}
+                    <div class="visual-project-content">
 
+                        <div class="project-topline">
+                            <span>PROJECT 03</span>
+                            <span class="complete-dot">COMPLETED</span>
+                        </div>
 
-.primary-button {
-    background: #2563eb;
+                        <h3>
+                            AC-to-DC Regulated Power Supply
+                        </h3>
 
-    color: white;
-}
+                        <p>
+                            Designed and analyzed a regulated supply
+                            converting nominal 12 V AC to approximately
+                            5 V DC through bridge rectification,
+                            filtering, and linear regulation.
+                        </p>
 
+                        <div class="result-strip">
 
-.primary-button:hover {
-    background: #1d4ed8;
-}
+                            <div>
+                                <strong>12 VAC</strong>
+                                <span>Input</span>
+                            </div>
 
+                            <div>
+                                <strong>~5 VDC</strong>
+                                <span>Output</span>
+                            </div>
 
-.secondary-button {
-    border:
-        1px solid #94a3b8;
+                            <div>
+                                <strong>4</strong>
+                                <span>Load Conditions</span>
+                            </div>
 
-    color: inherit;
+                        </div>
 
-    background: transparent;
-}
+                        <div class="technology-list">
+                            <span>LTspice</span>
+                            <span>LM7805</span>
+                            <span>Rectification</span>
+                            <span>Ripple Analysis</span>
+                            <span>Load Testing</span>
+                        </div>
 
+                        <div class="project-action-row">
+                            <a
+                                href="https://github.com/megablocks1377/AC-to-DC-Regulated-Power-Supply"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-main-link"
+                            >
+                                View GitHub →
+                            </a>
+                        </div>
 
-.secondary-button:hover {
-    background:
-        rgba(148, 163, 184, 0.12);
-}
+                    </div>
 
+                </article>
 
-/* ========================================
-   STANDARD SECTIONS
-======================================== */
 
-.section {
-    padding:
-        100px 30px;
-}
+                <!-- RASPBERRY PI DRAWER -->
 
+                <article class="visual-project-card">
 
-.section-container {
-    max-width: 1150px;
+                    <div class="project-image raspberry-image">
+                        <div class="project-image-label">
+                            EMBEDDED SYSTEMS
+                        </div>
+                    </div>
 
-    margin: auto;
-}
+                    <div class="visual-project-content">
 
+                        <div class="project-topline">
+                            <span>PROJECT 04</span>
+                            <span class="complete-dot">COMPLETED</span>
+                        </div>
 
-.section-label {
-    color: #2563eb;
+                        <h3>
+                            Raspberry Pi 4 Automated Drawer System
+                        </h3>
 
-    font-size: 0.8rem;
+                        <p>
+                            Built a dual-drawer electromechanical
+                            automation system using a Raspberry Pi,
+                            motor drivers, DC gearmotors, GT2 belts,
+                            and GPIO-based motor control.
+                        </p>
 
-    font-weight: 700;
+                        <div class="result-strip">
 
-    letter-spacing: 0.15em;
+                            <div>
+                                <strong>2</strong>
+                                <span>Drawers</span>
+                            </div>
 
-    margin-bottom: 10px;
-}
+                            <div>
+                                <strong>3</strong>
+                                <span>Positions</span>
+                            </div>
 
+                            <div>
+                                <strong>Python</strong>
+                                <span>Controller</span>
+                            </div>
 
-.section-title {
-    color: #0f172a;
+                        </div>
 
-    font-size:
-        clamp(2rem, 5vw, 3rem);
+                        <div class="technology-list">
+                            <span>Python</span>
+                            <span>Raspberry Pi 4</span>
+                            <span>GPIO</span>
+                            <span>DC Motors</span>
+                            <span>IBT-2</span>
+                        </div>
 
-    line-height: 1.15;
+                    </div>
 
-    margin-bottom: 25px;
-}
+                </article>
 
 
-.section-description {
-    max-width: 760px;
+            </div>
 
-    color: #64748b;
 
-    margin-bottom: 50px;
-}
+            <!-- ADDITIONAL PROJECTS -->
 
+            <div class="additional-projects">
 
-/* ========================================
-   ABOUT
-======================================== */
+                <p class="section-label">
+                    ADDITIONAL SOFTWARE PROJECTS
+                </p>
 
-.about-grid {
-    display: grid;
+                <h2 class="secondary-project-title">
+                    Software & Application Development
+                </h2>
 
-    grid-template-columns:
-        1.4fr 1fr;
+                <div class="small-project-grid">
 
-    gap: 70px;
+                    <article class="small-project-card">
 
-    align-items: start;
-}
+                        <span class="small-project-category">
+                            JAVA DESKTOP APPLICATION
+                        </span>
 
+                        <h3>
+                            Shortcut Manager
+                        </h3>
 
-.about-text {
-    font-size: 1.05rem;
+                        <p>
+                            Desktop productivity application that
+                            identifies active software, displays
+                            application-specific keyboard shortcuts,
+                            and supports customizable cross-application
+                            shortcut references.
+                        </p>
 
-    color: #475569;
-}
+                        <div class="technology-list">
+                            <span>Java</span>
+                            <span>JavaFX</span>
+                            <span>GUI</span>
+                        </div>
 
+                        <a
+                            href="https://github.com/megablocks1377/Shortcut-Manager-"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="small-project-link"
+                        >
+                            View GitHub →
+                        </a>
 
-.about-text p {
-    margin-bottom: 20px;
-}
+                    </article>
 
 
-.quick-info {
-    background: white;
+                    <article class="small-project-card">
 
-    padding: 30px;
+                        <span class="small-project-category">
+                            FULL-STACK APPLICATION
+                        </span>
 
-    border-radius: 10px;
+                        <h3>
+                            Online Self-Service Kiosk
+                        </h3>
 
-    border:
-        1px solid #e2e8f0;
-}
+                        <p>
+                            Point-of-sale and self-service platform
+                            supporting customer, cashier, manager,
+                            and menu-board interfaces.
+                        </p>
 
+                        <div class="technology-list">
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                        </div>
 
-.info-item {
-    padding: 17px 0;
+                    </article>
 
-    border-bottom:
-        1px solid #e2e8f0;
 
-    display: flex;
+                    <article class="small-project-card">
 
-    flex-direction: column;
-}
+                        <span class="small-project-category">
+                            DATABASE APPLICATION
+                        </span>
 
+                        <h3>
+                            Online Bookstore
+                        </h3>
 
-.info-item:last-child {
-    border-bottom: none;
-}
+                        <p>
+                            Database-backed bookstore application
+                            supporting customer and manager roles,
+                            search, purchasing, rentals, orders,
+                            and payment workflows.
+                        </p>
 
+                        <div class="technology-list">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>MySQL</span>
+                        </div>
 
-.info-title {
-    font-size: 0.75rem;
+                    </article>
 
-    font-weight: 700;
+                </div>
 
-    letter-spacing: 0.08em;
+            </div>
 
-    color: #64748b;
+        </div>
 
-    text-transform: uppercase;
+    </section>
 
-    margin-bottom: 3px;
-}
 
+    <!-- =========================
+         SKILLS
+    ========================== -->
 
-.info-item a {
-    color: #2563eb;
-}
+    <section class="section" id="skills">
 
+        <div class="section-container">
 
-/* ========================================
-   PROJECTS
-======================================== */
+            <p class="section-label">
+                TECHNICAL SKILLS
+            </p>
 
-.projects-section {
-    background: #f1f5f9;
-}
+            <h2 class="section-title">
+                Engineering Toolkit
+            </h2>
 
+            <div class="skills-grid">
 
-.project-grid {
-    display: grid;
+                <div class="skill-card">
+                    <h3>Embedded Systems</h3>
+                    <p>
+                        Arduino • Raspberry Pi • GPIO • Sensors •
+                        Encoders • Motor Drivers • Limit Switches •
+                        Hardware-Software Integration
+                    </p>
+                </div>
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+                <div class="skill-card">
+                    <h3>Controls & Automation</h3>
+                    <p>
+                        IEC 61131-3 • Ladder Logic • OpenPLC •
+                        Manual/Automatic Control • Interlocks •
+                        TON Timers • CTU Counters • Alarm Logic
+                    </p>
+                </div>
 
-    gap: 25px;
-}
+                <div class="skill-card">
+                    <h3>Industrial Communication & HMI</h3>
+                    <p>
+                        Operator Interface Design • Runtime Configuration •
+                        PLC Monitoring • Sensor Status Visualization •
+                        Fault Display • Process Interaction
+                    </p>
+                </div>
 
+                <div class="skill-card">
+                    <h3>Power Electronics</h3>
+                    <p>
+                        AC-to-DC Conversion • Rectifiers •
+                        Capacitive Filtering • Voltage Regulation •
+                        Ripple Analysis • Load Regulation • LTspice
+                    </p>
+                </div>
 
-.project-card {
-    position: relative;
+                <div class="skill-card">
+                    <h3>Digital Hardware & Verification</h3>
+                    <p>
+                        Verilog • SystemVerilog • VHDL • UVM •
+                        Testbenches • Functional Verification •
+                        ModelSim • QuestaSim
+                    </p>
+                </div>
 
-    background: white;
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>
+                        C • C++ • Java • Python • SQL •
+                        JavaScript • Verilog • SystemVerilog
+                    </p>
+                </div>
 
-    border:
-        1px solid #e2e8f0;
+                <div class="skill-card">
+                    <h3>Test & Measurement</h3>
+                    <p>
+                        Oscilloscope • Digital Multimeter •
+                        Function Generator • Load Testing •
+                        Waveform Analysis • Electrical Troubleshooting
+                    </p>
+                </div>
 
-    border-radius: 12px;
+                <div class="skill-card">
+                    <h3>Engineering Tools</h3>
+                    <p>
+                        Git • Linux • Docker • LTspice •
+                        Cadence Virtuoso • Arduino IDE •
+                        OpenPLC • ModelSim • QuestaSim
+                    </p>
+                </div>
 
-    padding: 35px;
+            </div>
 
-    min-width: 0;
+        </div>
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-}
+    </section>
 
 
-.project-card:hover {
-    transform:
-        translateY(-5px);
+    <!-- =========================
+         RESUMES
+    ========================== -->
 
-    border-color:
-        #bfdbfe;
+    <section
+        class="section resume-section"
+        id="resumes"
+    >
 
-    box-shadow:
-        0 18px 35px
-        rgba(15, 23, 42, 0.08);
-}
+        <div class="section-container">
 
+            <p class="section-label">
+                RESUMES
+            </p>
 
-.project-number {
-    position: absolute;
+            <h2 class="section-title">
+                Specialized Resumes
+            </h2>
 
-    top: 25px;
+            <p class="section-description">
+                Select the resume most relevant to the engineering role.
+            </p>
 
-    right: 28px;
+            <div class="resume-grid">
 
-    color: #cbd5e1;
+                <div class="resume-card">
 
-    font-size: 2rem;
+                    <div class="resume-number">01</div>
 
-    font-weight: 700;
-}
+                    <p class="resume-category">
+                        EMBEDDED SYSTEMS
+                    </p>
 
+                    <h3>Embedded Systems Resume</h3>
 
-.project-category {
-    color: #2563eb;
+                    <p>
+                        Embedded development, microcontrollers,
+                        C/C++, motor control, sensors, and
+                        hardware-software integration.
+                    </p>
 
-    font-size: 0.75rem;
+                    <div class="resume-tags">
+                        <span>C/C++</span>
+                        <span>Arduino</span>
+                        <span>Raspberry Pi</span>
+                        <span>Embedded</span>
+                    </div>
 
-    font-weight: 700;
+                    <a
+                        href="resumes/Alan_Davila_Resume_Embedded.pdf"
+                        target="_blank"
+                        class="resume-button"
+                    >
+                        View Resume →
+                    </a>
 
-    letter-spacing: 0.1em;
+                </div>
 
-    margin-bottom: 12px;
-}
 
+                <div class="resume-card">
 
-.project-card h3 {
-    color: #0f172a;
+                    <div class="resume-number">02</div>
 
-    font-size: 1.4rem;
+                    <p class="resume-category">
+                        CONTROLS & AUTOMATION
+                    </p>
 
-    max-width: 82%;
+                    <h3>Controls & Automation Resume</h3>
 
-    line-height: 1.3;
+                    <p>
+                        PLC programming, ladder logic, HMI systems,
+                        industrial automation, motor control,
+                        and closed-loop systems.
+                    </p>
 
-    margin-bottom: 18px;
-}
+                    <div class="resume-tags">
+                        <span>PLC</span>
+                        <span>Ladder Logic</span>
+                        <span>HMI</span>
+                        <span>Automation</span>
+                    </div>
 
+                    <a
+                        href="resumes/Alan_Davila_Resume_Controls.pdf"
+                        target="_blank"
+                        class="resume-button"
+                    >
+                        View Resume →
+                    </a>
 
-.project-card p {
-    color: #64748b;
+                </div>
 
-    margin-bottom: 15px;
-}
 
+                <div class="resume-card">
 
-.technology-list {
-    display: flex;
+                    <div class="resume-number">03</div>
 
-    flex-wrap: wrap;
+                    <p class="resume-category">
+                        POWER SYSTEMS
+                    </p>
 
-    gap: 8px;
+                    <h3>Power Systems Resume</h3>
 
-    margin-top: 25px;
-}
+                    <p>
+                        Electrical systems, power electronics,
+                        circuit analysis, power conversion,
+                        testing, and electrical applications.
+                    </p>
 
+                    <div class="resume-tags">
+                        <span>Power</span>
+                        <span>Circuits</span>
+                        <span>Electronics</span>
+                        <span>Testing</span>
+                    </div>
 
-.technology-list span {
-    background: #eff6ff;
+                    <a
+                        href="resumes/Alan_Davila_Resume_Power.pdf"
+                        target="_blank"
+                        class="resume-button"
+                    >
+                        View Resume →
+                    </a>
 
-    color: #1d4ed8;
+                </div>
 
-    padding: 6px 10px;
+            </div>
 
-    border-radius: 5px;
+        </div>
 
-    font-size: 0.76rem;
+    </section>
 
-    font-weight: 600;
-}
 
+    <!-- =========================
+         CURRENT WORK
+    ========================== -->
 
-.project-links {
-    margin-top: 28px;
-}
+    <section class="section future-section">
 
+        <div class="section-container">
 
-.project-links a {
-    color: #2563eb;
+            <p class="section-label">
+                CURRENTLY DEVELOPING
+            </p>
 
-    font-weight: 600;
-}
+            <h2 class="section-title">
+                Upcoming Work
+            </h2>
 
+            <div class="future-grid">
 
-.project-links a:hover {
-    text-decoration: underline;
-}
+                <div class="future-card">
+                    <span>Digital Hardware</span>
+                    <h3>FPGA ALU Design & Verification</h3>
+                    <p>
+                        Verilog-based ALU design with
+                        SystemVerilog verification,
+                        simulation, and FPGA implementation.
+                    </p>
+                    <div class="status">IN PROGRESS</div>
+                </div>
 
+                <div class="future-card">
+                    <span>Engineering Design</span>
+                    <h3>Senior Capstone</h3>
+                    <p>
+                        ESP32-based sensing and measurement system
+                        currently under development as a senior
+                        engineering design project.
+                    </p>
+                    <div class="status">IN PROGRESS</div>
+                </div>
 
-/* ========================================
-   COMPLETED PROJECT BADGE
-======================================== */
+            </div>
 
-.project-complete {
-    display: inline-block;
+        </div>
 
-    margin-top: 28px;
+    </section>
 
-    padding: 6px 10px;
 
-    border-radius: 5px;
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
-    background: #ecfdf5;
+    <section
+        class="contact-section"
+        id="contact"
+    >
 
-    color: #047857;
+        <div class="contact-container">
 
-    font-size: 0.72rem;
+            <p class="section-label">
+                CONTACT
+            </p>
 
-    font-weight: 700;
+            <h2>
+                Let's Build Something.
+            </h2>
 
-    letter-spacing: 0.08em;
-}
+            <p>
+                Interested in discussing engineering opportunities,
+                projects, or my work?
+            </p>
 
+            <div class="contact-buttons">
 
-/* ========================================
-   SKILLS
-======================================== */
+                <a
+                    href="mailto:alanamadeus1377@gmail.com"
+                    class="button primary-button"
+                >
+                    Email Me
+                </a>
 
-.skills-grid {
-    display: grid;
+                <a
+                    href="https://www.linkedin.com/in/alan-amadeus-davila-268542233/"
+                    target="_blank"
+                    class="button secondary-button"
+                >
+                    LinkedIn
+                </a>
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+                <a
+                    href="https://github.com/megablocks1377"
+                    target="_blank"
+                    class="button secondary-button"
+                >
+                    GitHub
+                </a>
 
-    gap: 20px;
-}
+            </div>
 
+        </div>
 
-.skill-card {
-    padding: 28px;
+    </section>
 
-    border-left:
-        4px solid #2563eb;
 
-    background: white;
+    <footer>
+        <p>© 2026 Alan Davila</p>
+        <p>Computer Engineering • Texas A&M University</p>
+    </footer>
 
-    border-radius:
-        0 8px 8px 0;
+</body>
 
-    box-shadow:
-        0 5px 20px
-        rgba(15, 23, 42, 0.04);
-}
-
-
-.skill-card h3 {
-    color: #0f172a;
-
-    margin-bottom: 10px;
-}
-
-
-.skill-card p {
-    color: #64748b;
-}
-
-
-/* ========================================
-   RESUMES
-======================================== */
-
-.resume-section {
-    background: white;
-}
-
-
-.resume-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 22px;
-}
-
-
-.resume-card {
-    position: relative;
-
-    padding: 32px;
-
-    background: #f8fafc;
-
-    border:
-        1px solid #e2e8f0;
-
-    border-radius: 12px;
-
-    min-width: 0;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-}
-
-
-.resume-card:hover {
-    transform:
-        translateY(-5px);
-
-    border-color:
-        #bfdbfe;
-
-    box-shadow:
-        0 18px 35px
-        rgba(15, 23, 42, 0.08);
-}
-
-
-.resume-number {
-    position: absolute;
-
-    top: 25px;
-
-    right: 28px;
-
-    color: #cbd5e1;
-
-    font-size: 1.8rem;
-
-    font-weight: 700;
-}
-
-
-.resume-category {
-    color: #2563eb;
-
-    font-size: 0.72rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.1em;
-
-    margin-bottom: 12px;
-}
-
-
-.resume-card h3 {
-    max-width: 80%;
-
-    color: #0f172a;
-
-    font-size: 1.35rem;
-
-    line-height: 1.3;
-
-    margin-bottom: 17px;
-}
-
-
-.resume-card
-> p:not(.resume-category) {
-    color: #64748b;
-
-    margin-bottom: 22px;
-}
-
-
-.resume-tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin-bottom: 28px;
-}
-
-
-.resume-tags span {
-    background: #eff6ff;
-
-    color: #1d4ed8;
-
-    padding: 6px 9px;
-
-    border-radius: 5px;
-
-    font-size: 0.72rem;
-
-    font-weight: 600;
-}
-
-
-.resume-button {
-    display: inline-block;
-
-    color: #2563eb;
-
-    font-weight: 600;
-
-    padding-bottom: 3px;
-
-    border-bottom:
-        1px solid transparent;
-
-    transition:
-        border-color 0.2s ease;
-}
-
-
-.resume-button:hover {
-    border-color:
-        #2563eb;
-}
-
-
-/* ========================================
-   CURRENTLY DEVELOPING
-======================================== */
-
-.future-section {
-    background: #0f172a;
-}
-
-
-.future-section
-.section-title {
-    color: white;
-}
-
-
-.future-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-}
-
-
-.future-card {
-    border:
-        1px solid #334155;
-
-    border-radius: 10px;
-
-    padding: 28px;
-
-    color: white;
-}
-
-
-.future-card > span {
-    color: #60a5fa;
-
-    font-size: 0.75rem;
-
-    font-weight: 700;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.08em;
-}
-
-
-.future-card h3 {
-    margin:
-        15px 0;
-
-    line-height: 1.3;
-}
-
-
-.future-card p {
-    color: #94a3b8;
-}
-
-
-.status {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 5px 9px;
-
-    border:
-        1px solid #475569;
-
-    border-radius: 5px;
-
-    color: #94a3b8;
-
-    font-size: 0.7rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.07em;
-}
-
-
-/* ========================================
-   CONTACT
-======================================== */
-
-.contact-section {
-    background: white;
-
-    padding:
-        110px 30px;
-}
-
-
-.contact-container {
-    max-width: 800px;
-
-    margin: auto;
-
-    text-align: center;
-}
-
-
-.contact-container h2 {
-    color: #0f172a;
-
-    font-size:
-        clamp(2.5rem, 6vw, 4rem);
-
-    margin-bottom: 20px;
-}
-
-
-.contact-container
-> p:not(.section-label) {
-    color: #64748b;
-
-    margin-bottom: 35px;
-}
-
-
-.contact-buttons {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    flex-wrap: wrap;
-}
-
-
-.contact-section
-.secondary-button {
-    color: #1e293b;
-}
-
-
-/* ========================================
-   FOOTER
-======================================== */
-
-footer {
-    background: #020617;
-
-    color: #64748b;
-
-    padding:
-        35px 30px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    font-size: 0.85rem;
-}
-
-
-/* ========================================
-   TABLET
-======================================== */
-
-@media (max-width: 900px) {
-
-    .about-grid {
-        grid-template-columns:
-            1fr;
-
-        gap: 35px;
-    }
-
-
-    .project-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .resume-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .future-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-}
-
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 700px) {
-
-    .nav-container {
-        padding:
-            0 20px;
-    }
-
-
-    .nav-links {
-        gap: 13px;
-    }
-
-
-    .nav-links a {
-        font-size: 0.78rem;
-    }
-
-
-    .hero {
-        background-position:
-            center;
-    }
-
-
-    .hero-content {
-        padding:
-            90px 20px;
-
-        min-height: 540px;
-    }
-
-
-    .section {
-        padding:
-            75px 20px;
-    }
-
-
-    .skills-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .project-card {
-        padding: 28px;
-    }
-
-
-    .resume-card {
-        padding: 28px;
-    }
-
-
-    .project-number,
-    .resume-number {
-        font-size: 1.5rem;
-    }
-
-
-    footer {
-        flex-direction:
-            column;
-
-        text-align:
-            center;
-    }
-
-}
-
-
-/* ========================================
-   SMALL PHONE
-======================================== */
-
-@media (max-width: 520px) {
-
-    .nav-links {
-        gap: 10px;
-    }
-
-
-    .nav-links a {
-        font-size: 0.72rem;
-    }
-
-
-    .logo {
-        width: 38px;
-
-        height: 38px;
-    }
-
-
-    .hero h1 {
-        font-size: 3.4rem;
-    }
-
-
-    .hero-buttons {
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
-    }
-
-
-    .button {
-        width: 100%;
-
-        text-align: center;
-    }
-
-}
-
-
-/* ========================================
-   VERY SMALL PHONE
-======================================== */
-
-@media (max-width: 420px) {
-
-    .nav-links a:nth-child(1) {
-        display: none;
-    }
-
-
-    .nav-links {
-        gap: 12px;
-    }
-
-}
+</html>
