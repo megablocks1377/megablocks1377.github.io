@@ -25,7 +25,9 @@ body {
         sans-serif;
 
     background: #f8fafc;
+
     color: #1e293b;
+
     line-height: 1.7;
 }
 
@@ -42,10 +44,13 @@ a {
 
 .navbar {
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
 
-    background: rgba(15, 23, 42, 0.97);
+    background:
+        rgba(15, 23, 42, 0.97);
 
     border-bottom:
         1px solid rgba(255, 255, 255, 0.1);
@@ -54,37 +59,47 @@ a {
 
 .nav-container {
     max-width: 1150px;
+
     margin: auto;
 
     min-height: 70px;
+
     padding: 0 30px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
 
 
 .logo {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     width: 42px;
+
     height: 42px;
 
     border-radius: 8px;
 
     background: #2563eb;
+
     color: white;
 
     font-size: 1rem;
+
     font-weight: 700;
 }
 
 
 .nav-links {
     display: flex;
+
     gap: 30px;
 }
 
@@ -93,9 +108,11 @@ a {
     color: #cbd5e1;
 
     font-size: 0.95rem;
+
     font-weight: 500;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease;
 }
 
 
@@ -121,7 +138,9 @@ a {
         url("images/drawer-background.jpg");
 
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
 
     color: white;
@@ -130,16 +149,21 @@ a {
 
 .hero-content {
     position: relative;
+
     z-index: 1;
 
     max-width: 1150px;
+
     margin: auto;
 
     min-height: 620px;
+
     padding: 120px 30px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
@@ -148,6 +172,7 @@ a {
     color: #60a5fa;
 
     font-size: 0.85rem;
+
     font-weight: 700;
 
     letter-spacing: 0.16em;
@@ -195,7 +220,9 @@ a {
 
 .hero-buttons {
     display: flex;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
@@ -212,6 +239,7 @@ a {
     border-radius: 7px;
 
     font-weight: 600;
+
     font-size: 0.95rem;
 
     transition:
@@ -227,6 +255,7 @@ a {
 
 .primary-button {
     background: #2563eb;
+
     color: white;
 }
 
@@ -237,9 +266,11 @@ a {
 
 
 .secondary-button {
-    border: 1px solid #94a3b8;
+    border:
+        1px solid #94a3b8;
 
     color: inherit;
+
     background: transparent;
 }
 
@@ -255,12 +286,14 @@ a {
 ======================================== */
 
 .section {
-    padding: 100px 30px;
+    padding:
+        100px 30px;
 }
 
 
 .section-container {
     max-width: 1150px;
+
     margin: auto;
 }
 
@@ -269,6 +302,7 @@ a {
     color: #2563eb;
 
     font-size: 0.8rem;
+
     font-weight: 700;
 
     letter-spacing: 0.15em;
@@ -316,6 +350,7 @@ a {
 
 .about-text {
     font-size: 1.05rem;
+
     color: #475569;
 }
 
@@ -344,6 +379,7 @@ a {
         1px solid #e2e8f0;
 
     display: flex;
+
     flex-direction: column;
 }
 
@@ -355,6 +391,7 @@ a {
 
 .info-title {
     font-size: 0.75rem;
+
     font-weight: 700;
 
     letter-spacing: 0.08em;
@@ -385,7 +422,7 @@ a {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
 
     gap: 25px;
 }
@@ -403,6 +440,8 @@ a {
 
     padding: 35px;
 
+    min-width: 0;
+
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
@@ -411,9 +450,11 @@ a {
 
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
-    border-color: #bfdbfe;
+    border-color:
+        #bfdbfe;
 
     box-shadow:
         0 18px 35px
@@ -425,11 +466,13 @@ a {
     position: absolute;
 
     top: 25px;
+
     right: 28px;
 
     color: #cbd5e1;
 
     font-size: 2rem;
+
     font-weight: 700;
 }
 
@@ -438,6 +481,7 @@ a {
     color: #2563eb;
 
     font-size: 0.75rem;
+
     font-weight: 700;
 
     letter-spacing: 0.1em;
@@ -451,7 +495,7 @@ a {
 
     font-size: 1.4rem;
 
-    max-width: 80%;
+    max-width: 82%;
 
     line-height: 1.3;
 
@@ -468,6 +512,7 @@ a {
 
 .technology-list {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 8px;
@@ -486,6 +531,7 @@ a {
     border-radius: 5px;
 
     font-size: 0.76rem;
+
     font-weight: 600;
 }
 
@@ -508,7 +554,7 @@ a {
 
 
 /* ========================================
-   COMPLETED PROJECT LABEL
+   COMPLETED PROJECT BADGE
 ======================================== */
 
 .project-complete {
@@ -540,7 +586,7 @@ a {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
 
     gap: 20px;
 }
@@ -588,7 +634,7 @@ a {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: 22px;
 }
@@ -606,6 +652,8 @@ a {
 
     border-radius: 12px;
 
+    min-width: 0;
+
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
@@ -614,9 +662,11 @@ a {
 
 
 .resume-card:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
-    border-color: #bfdbfe;
+    border-color:
+        #bfdbfe;
 
     box-shadow:
         0 18px 35px
@@ -628,11 +678,13 @@ a {
     position: absolute;
 
     top: 25px;
+
     right: 28px;
 
     color: #cbd5e1;
 
     font-size: 1.8rem;
+
     font-weight: 700;
 }
 
@@ -641,6 +693,7 @@ a {
     color: #2563eb;
 
     font-size: 0.72rem;
+
     font-weight: 700;
 
     letter-spacing: 0.1em;
@@ -662,7 +715,8 @@ a {
 }
 
 
-.resume-card > p:not(.resume-category) {
+.resume-card
+> p:not(.resume-category) {
     color: #64748b;
 
     margin-bottom: 22px;
@@ -671,6 +725,7 @@ a {
 
 .resume-tags {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 7px;
@@ -689,6 +744,7 @@ a {
     border-radius: 5px;
 
     font-size: 0.72rem;
+
     font-weight: 600;
 }
 
@@ -711,7 +767,8 @@ a {
 
 
 .resume-button:hover {
-    border-color: #2563eb;
+    border-color:
+        #2563eb;
 }
 
 
@@ -724,7 +781,8 @@ a {
 }
 
 
-.future-section .section-title {
+.future-section
+.section-title {
     color: white;
 }
 
@@ -733,7 +791,7 @@ a {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
 
     gap: 20px;
 }
@@ -755,6 +813,7 @@ a {
     color: #60a5fa;
 
     font-size: 0.75rem;
+
     font-weight: 700;
 
     text-transform: uppercase;
@@ -764,7 +823,8 @@ a {
 
 
 .future-card h3 {
-    margin: 15px 0;
+    margin:
+        15px 0;
 
     line-height: 1.3;
 }
@@ -790,6 +850,7 @@ a {
     color: #94a3b8;
 
     font-size: 0.7rem;
+
     font-weight: 700;
 
     letter-spacing: 0.07em;
@@ -803,7 +864,8 @@ a {
 .contact-section {
     background: white;
 
-    padding: 110px 30px;
+    padding:
+        110px 30px;
 }
 
 
@@ -845,7 +907,8 @@ a {
 }
 
 
-.contact-section .secondary-button {
+.contact-section
+.secondary-button {
     color: #1e293b;
 }
 
@@ -859,7 +922,8 @@ footer {
 
     color: #64748b;
 
-    padding: 35px 30px;
+    padding:
+        35px 30px;
 
     display: flex;
 
@@ -878,24 +942,28 @@ footer {
 @media (max-width: 900px) {
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 35px;
     }
 
 
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
 
     .resume-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
 
     .future-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
 }
@@ -908,7 +976,8 @@ footer {
 @media (max-width: 700px) {
 
     .nav-container {
-        padding: 0 20px;
+        padding:
+            0 20px;
     }
 
 
@@ -923,7 +992,8 @@ footer {
 
 
     .hero {
-        background-position: center;
+        background-position:
+            center;
     }
 
 
@@ -942,7 +1012,8 @@ footer {
 
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
 
@@ -963,9 +1034,11 @@ footer {
 
 
     footer {
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        text-align: center;
+        text-align:
+            center;
     }
 
 }
@@ -989,6 +1062,7 @@ footer {
 
     .logo {
         width: 38px;
+
         height: 38px;
     }
 
@@ -999,9 +1073,11 @@ footer {
 
 
     .hero-buttons {
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
     }
 
 
