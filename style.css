@@ -503,7 +503,9 @@ a {
 
 .plc-image {
     background-image:
-        url("images/plc-conveyor/thumbnail.png");
+        url("images/plc-conveyor/ladderlogic.png");
+
+    background-position: center;
 }
 
 
