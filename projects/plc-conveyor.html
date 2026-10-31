@@ -1,1 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PLC Conveyor Control & HMI System | Alan Davila</title>
+
+    <meta
+        name="description"
+        content="PLC conveyor automation project using OpenPLC, IEC 61131-3 ladder logic, timers, counters, fault logic, Docker, HMI monitoring, and industrial control concepts."
+    >
+
+    <link rel="stylesheet" href="../style.css?v=13">
+</head>
+
+
+<body class="project-page">
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                AD
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="case-study-hero">
+
+        <div class="case-study-container">
+
+            <p class="section-label">
+                CONTROLS & AUTOMATION
+            </p>
+
+            <h1>
+                PLC Conveyor Control & HMI System
+            </h1>
+
+            <p class="case-study-intro">
+                A simulated industrial conveyor automation system
+                implementing manual and automatic control, sensor-based
+                sequencing, fault detection, production counting,
+                timers, alarms, and PLC runtime testing.
+            </p>
+
+            <div class="technology-list">
+
+                <span>OpenPLC</span>
+                <span>IEC 61131-3</span>
+                <span>Ladder Logic</span>
+                <span>TON Timers</span>
+                <span>CTU Counters</span>
+                <span>Docker</span>
+                <span>HMI</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="case-study-container">
+
+
+        <!-- OVERVIEW -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                PROJECT OVERVIEW
+            </p>
+
+            <h2>
+                Industrial Control Logic
+            </h2>
+
+            <p>
+                The goal of this project was to build and test a
+                PLC-style conveyor control system that demonstrates
+                common industrial automation concepts rather than
+                simply turning a motor on and off.
+            </p>
+
+            <p>
+                The system supports manual and automatic operating
+                modes, start and stop behavior, conveyor run commands,
+                entry and exit sensor logic, part-in-process state
+                tracking, jam detection, alarms, production counting,
+                and motor interlocks.
+            </p>
+
+
+            <div class="case-results">
+
+                <div>
+
+                    <strong>
+                        2 Modes
+                    </strong>
+
+                    <span>
+                        Manual and automatic operation
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        5 s
+                    </strong>
+
+                    <span>
+                        Jam detection timer
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        CTU
+                    </strong>
+
+                    <span>
+                        Production part counter
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN LOGIC -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                LADDER LOGIC
+            </p>
+
+            <h2>
+                Main Conveyor Control
+            </h2>
+
+            <img
+                src="../images/plc-conveyor/ladderlogic.png"
+                alt="PLC ladder logic for conveyor manual and automatic control"
+                class="case-image"
+            >
+
+            <p>
+                The primary ladder rungs establish the system's
+                operating behavior. Stop conditions are evaluated
+                before manual or automatic commands are allowed
+                to control the conveyor.
+            </p>
+
+            <p>
+                Automatic operation uses entry and exit sensor states
+                to track whether a part is currently in the conveyor
+                process. Manual operation provides a separate run
+                command while retaining the system's required
+                permissive conditions.
+            </p>
+
+        </section>
+
+
+        <!-- TIMER -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                FAULT DETECTION
+            </p>
+
+            <h2>
+                Timer-Based Jam Logic
+            </h2>
+
+            <img
+                src="../images/plc-conveyor/timerlogic.png"
+                alt="PLC timer logic used for conveyor jam detection"
+                class="case-image"
+            >
+
+            <p>
+                A TON timer is used to detect a condition that remains
+                active longer than expected. If the simulated jam
+                condition persists for the configured delay, the
+                fault logic activates.
+            </p>
+
+            <p>
+                The resulting jam fault inhibits conveyor motor
+                operation and drives the system's alarm behavior.
+            </p>
+
+        </section>
+
+
+        <!-- DESIGNATIONS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                I/O & VARIABLES
+            </p>
+
+            <h2>
+                PLC Variable Designations
+            </h2>
+
+            <img
+                src="../images/plc-conveyor/designations.png"
+                alt="PLC input output and variable designations"
+                class="case-image"
+            >
+
+            <p>
+                PLC variables were organized to separate operator
+                commands, sensor inputs, internal state variables,
+                timers, counters, alarms, and motor outputs.
+            </p>
+
+            <p>
+                Maintaining clear variable designations made the
+                ladder program easier to debug and made the relationship
+                between field inputs, internal logic, and system outputs
+                easier to follow.
+            </p>
+
+        </section>
+
+
+        <!-- HMI -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                OPERATOR INTERFACE
+            </p>
+
+            <h2>
+                HMI Testing
+            </h2>
+
+            <img
+                src="../images/plc-conveyor/hmitest.png"
+                alt="HMI testing for PLC conveyor control system"
+                class="case-image"
+            >
+
+            <p>
+                The project also explored operator-side monitoring
+                and control so that important PLC states could be
+                observed through an HMI-style interface.
+            </p>
+
+            <p>
+                The interface provides a foundation for displaying
+                sensor conditions, operating mode, conveyor state,
+                production information, and fault status.
+            </p>
+
+        </section>
+
+
+        <!-- SERVER -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                PLC RUNTIME
+            </p>
+
+            <h2>
+                Runtime & Server Configuration
+            </h2>
+
+            <img
+                src="../images/plc-conveyor/server.png"
+                alt="OpenPLC runtime server configuration"
+                class="case-image"
+            >
+
+            <p>
+                The ladder program was executed through an OpenPLC
+                runtime environment, allowing the control logic to
+                operate in a PLC-like software environment.
+            </p>
+
+            <p>
+                Runtime configuration provided experience beyond
+                writing ladder rungs by requiring the control program
+                to be loaded, executed, monitored, and tested as a
+                complete system.
+            </p>
+
+        </section>
+
+
+        <!-- DOCKER -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                DEPLOYMENT ENVIRONMENT
+            </p>
+
+            <h2>
+                Docker Runtime
+            </h2>
+
+            <img
+                src="../images/plc-conveyor/docker.png"
+                alt="Docker environment used for PLC project"
+                class="case-image"
+            >
+
+            <p>
+                Docker was used as part of the software environment
+                supporting the PLC runtime and related control tools.
+            </p>
+
+            <p>
+                This added experience with containerized engineering
+                software and helped separate the PLC runtime environment
+                from the host system configuration.
+            </p>
+
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                IMPLEMENTED FEATURES
+            </p>
+
+            <h2>
+                Control Functions
+            </h2>
+
+            <div class="takeaway-grid">
+
+                <div>
+                    Manual operating mode
+                </div>
+
+                <div>
+                    Automatic operating mode
+                </div>
+
+                <div>
+                    Start / stop logic
+                </div>
+
+                <div>
+                    Conveyor motor control
+                </div>
+
+                <div>
+                    Entry sensor logic
+                </div>
+
+                <div>
+                    Exit sensor logic
+                </div>
+
+                <div>
+                    Part-in-process state
+                </div>
+
+                <div>
+                    TON timer logic
+                </div>
+
+                <div>
+                    Jam fault detection
+                </div>
+
+                <div>
+                    Alarm logic
+                </div>
+
+                <div>
+                    CTU production counter
+                </div>
+
+                <div>
+                    Fault reset behavior
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TAKEAWAYS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                ENGINEERING TAKEAWAYS
+            </p>
+
+            <h2>
+                What I Practiced
+            </h2>
+
+            <p>
+                This project provided hands-on experience designing
+                control logic using the same building blocks found
+                in industrial PLC applications: permissives,
+                interlocks, timers, counters, operating modes,
+                state tracking, alarms, and fault handling.
+            </p>
+
+            <p>
+                It also demonstrated the importance of designing
+                automation around abnormal conditions rather than
+                only the normal operating sequence.
+            </p>
+
+        </section>
+
+
+        <!-- BACK -->
+
+        <section class="case-study-footer">
+
+            <h2>
+                Explore More Projects
+            </h2>
+
+            <a
+                href="../index.html#projects"
+                class="button primary-button"
+            >
+                Back to Portfolio
+            </a>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
