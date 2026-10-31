@@ -1,1 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Online Bookstore | Alan Davila</title>
+
+    <meta
+        name="description"
+        content="Database-backed bookstore application using Python, Flask, MySQL, APIs, authentication, customer and manager roles, orders, purchasing, and rental workflows."
+    >
+
+    <link rel="stylesheet" href="../style.css?v=13">
+</head>
+
+
+<body class="project-page">
+
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                AD
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <header class="case-study-hero">
+
+        <div class="case-study-container">
+
+            <p class="section-label">
+                DATABASE APPLICATION
+            </p>
+
+            <h1>
+                Online Bookstore
+            </h1>
+
+            <p class="case-study-intro">
+                A database-backed bookstore application supporting
+                authentication, catalog search, customer and manager
+                workflows, purchasing, rentals, orders, and API-driven
+                database operations.
+            </p>
+
+            <div class="technology-list">
+
+                <span>Python</span>
+                <span>Flask</span>
+                <span>MySQL</span>
+                <span>REST API</span>
+                <span>Authentication</span>
+                <span>Database Design</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="case-study-container">
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                PROJECT OVERVIEW
+            </p>
+
+            <h2>
+                Database-Driven Bookstore
+            </h2>
+
+            <p>
+                The project was designed around a relational database
+                storing bookstore information such as books,
+                customers, orders, and payment-related data.
+            </p>
+
+            <p>
+                Application logic exposes this data through customer
+                and manager workflows while maintaining the database
+                as the central source of application state.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                AUTHENTICATION
+            </p>
+
+            <h2>
+                Login & User Roles
+            </h2>
+
+            <img
+                src="../images/bookstore/login.png"
+                alt="Online bookstore login interface"
+                class="case-image"
+            >
+
+            <p>
+                Authentication separates customer functionality
+                from manager-level functionality and allows different
+                workflows to be presented depending on the user.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                CATALOG
+            </p>
+
+            <h2>
+                Book Search & Catalog
+            </h2>
+
+            <img
+                src="../images/bookstore/catelog.png"
+                alt="Online bookstore catalog interface"
+                class="case-image"
+            >
+
+            <p>
+                Customers can browse and search bookstore data
+                retrieved from the underlying relational database.
+            </p>
+
+            <p>
+                The catalog connects user-facing application
+                functionality with database records rather than
+                relying on static product information.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                API DEVELOPMENT
+            </p>
+
+            <h2>
+                GET & POST Operations
+            </h2>
+
+            <img
+                src="../images/bookstore/get&amp;post.png"
+                alt="GET and POST API testing for online bookstore"
+                class="case-image"
+            >
+
+            <p>
+                API routes were tested using GET and POST requests
+                to verify communication between the application
+                layer and database-backed services.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                JSON API
+            </p>
+
+            <h2>
+                Structured Application Data
+            </h2>
+
+            <img
+                src="../images/bookstore/json-api.png"
+                alt="JSON API response from online bookstore"
+                class="case-image"
+            >
+
+            <p>
+                JSON responses provide a structured interface
+                between application components and make database
+                information available through defined API endpoints.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                ORDER WORKFLOW
+            </p>
+
+            <h2>
+                Order Confirmation
+            </h2>
+
+            <img
+                src="../images/bookstore/orderconfirm.png"
+                alt="Online bookstore order confirmation"
+                class="case-image"
+            >
+
+            <p>
+                The order workflow combines customer selection,
+                database operations, order creation, and confirmation
+                into one complete application flow.
+            </p>
+
+            <p>
+                The system also supports purchasing and rental
+                functionality rather than limiting users to a
+                simple catalog lookup.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                ARCHITECTURE
+            </p>
+
+            <h2>
+                Application Structure
+            </h2>
+
+            <div class="architecture-flow">
+
+                <div>
+                    User Interface
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    Python / Flask
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    API Logic
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    MySQL Database
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                FEATURES
+            </p>
+
+            <h2>
+                Implemented Functionality
+            </h2>
+
+            <div class="takeaway-grid">
+
+                <div>
+                    Customer authentication
+                </div>
+
+                <div>
+                    Manager access
+                </div>
+
+                <div>
+                    Catalog search
+                </div>
+
+                <div>
+                    Book purchasing
+                </div>
+
+                <div>
+                    Book rentals
+                </div>
+
+                <div>
+                    Order creation
+                </div>
+
+                <div>
+                    API testing
+                </div>
+
+                <div>
+                    MySQL persistence
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-study-footer">
+
+            <h2>
+                Explore More Projects
+            </h2>
+
+            <a
+                href="../index.html#projects"
+                class="button primary-button"
+            >
+                Back to Portfolio
+            </a>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
