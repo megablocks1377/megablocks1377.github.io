@@ -1,1 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AC-to-DC Regulated Power Supply | Alan Davila</title>
+
+    <meta
+        name="description"
+        content="12 VAC to regulated 5 VDC power supply using bridge rectification, capacitive filtering, LM7805 regulation, LTspice simulation, and load analysis."
+    >
+
+    <link rel="stylesheet" href="../style.css?v=13">
+</head>
+
+
+<body class="project-page">
+
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                AD
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <header class="case-study-hero">
+
+        <div class="case-study-container">
+
+            <p class="section-label">
+                POWER ELECTRONICS
+            </p>
+
+            <h1>
+                AC-to-DC Regulated Power Supply
+            </h1>
+
+            <p class="case-study-intro">
+                A low-voltage power conversion project that transforms
+                a nominal 12 V AC input into a regulated 5 V DC output
+                through rectification, filtering, and linear regulation.
+            </p>
+
+            <div class="technology-list">
+
+                <span>LTspice</span>
+                <span>Bridge Rectifier</span>
+                <span>LM7805</span>
+                <span>Capacitive Filtering</span>
+                <span>Ripple Analysis</span>
+                <span>Load Regulation</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="case-study-container">
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                PROJECT OVERVIEW
+            </p>
+
+            <h2>
+                12 VAC → Regulated 5 VDC
+            </h2>
+
+            <p>
+                The objective of this project was to design and
+                analyze the complete conversion chain required to
+                turn a low-voltage AC source into a stable DC supply.
+            </p>
+
+
+            <div class="architecture-flow">
+
+                <div>
+                    12 VAC
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    Bridge Rectifier
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    Filter Capacitor
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    LM7805
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    ~5 VDC
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                CIRCUIT DESIGN
+            </p>
+
+            <h2>
+                LTspice Schematic
+            </h2>
+
+            <img
+                src="../images/power-supply/schematic.png"
+                alt="LTspice schematic of AC to DC regulated power supply"
+                class="case-image"
+            >
+
+            <p>
+                A full-wave bridge rectifier converts both halves
+                of the AC input waveform into pulsating DC.
+            </p>
+
+            <p>
+                A bulk filter capacitor smooths the rectified
+                waveform before it enters the LM7805 linear regulator.
+                The regulator then maintains an output near 5 V.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                INPUT
+            </p>
+
+            <h2>
+                AC Input Voltage
+            </h2>
+
+            <img
+                src="../images/power-supply/input_voltage.png"
+                alt="AC input voltage waveform for power supply"
+                class="case-image"
+            >
+
+            <p>
+                The nominal 12 V AC source is specified using its
+                RMS value. The peak sinusoidal voltage is therefore
+                greater than 12 V before accounting for diode losses.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                FILTERING
+            </p>
+
+            <h2>
+                Ripple Behavior
+            </h2>
+
+            <img
+                src="../images/power-supply/input_ripple.png"
+                alt="Power supply ripple simulation"
+                class="case-image"
+            >
+
+            <p>
+                After rectification, the filter capacitor charges
+                near the waveform peaks and supplies current to the
+                load between peaks.
+            </p>
+
+            <p>
+                As load current increases, the capacitor discharges
+                more between charging cycles, which increases ripple
+                and lowers the average unregulated DC voltage.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                LOAD SWEEP
+            </p>
+
+            <h2>
+                Regulation Across Four Loads
+            </h2>
+
+            <img
+                src="../images/power-supply/load_regulation.png"
+                alt="Power supply load regulation simulation"
+                class="case-image"
+            >
+
+            <div class="case-results">
+
+                <div>
+
+                    <strong>
+                        100 Ω
+                    </strong>
+
+                    <span>
+                        ~50 mA load
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        220 Ω
+                    </strong>
+
+                    <span>
+                        ~22.7 mA load
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        470 Ω / 1 kΩ
+                    </strong>
+
+                    <span>
+                        Lighter load conditions
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                The LTspice load sweep tested the supply with
+                100 Ω, 220 Ω, 470 Ω, and 1 kΩ output loads.
+            </p>
+
+            <p>
+                The average raw DC voltage decreased as the
+                output load became heavier while the regulator
+                maintained the output near the target voltage.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                SIMULATION RESULTS
+            </p>
+
+            <h2>
+                Raw DC Bus
+            </h2>
+
+            <img
+                src="../images/power-supply/results.png"
+                alt="LTspice power supply simulation results"
+                class="case-image"
+            >
+
+
+            <div class="case-results">
+
+                <div>
+
+                    <strong>
+                        14.40 V
+                    </strong>
+
+                    <span>
+                        Raw DC average at 100 Ω
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        14.66 V
+                    </strong>
+
+                    <span>
+                        Raw DC average at 220 Ω
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        ~5 V
+                    </strong>
+
+                    <span>
+                        Regulated output target
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                ENGINEERING TAKEAWAYS
+            </p>
+
+            <h2>
+                Power Conversion Tradeoffs
+            </h2>
+
+            <p>
+                The project demonstrates how rectification,
+                filtering, regulation, and load current interact
+                in a complete power supply rather than as isolated
+                circuit concepts.
+            </p>
+
+            <p>
+                It also illustrates the main tradeoff of a linear
+                regulator: excellent simplicity and output regulation
+                at the cost of dissipating the excess input voltage
+                as heat.
+            </p>
+
+
+            <div class="takeaway-grid">
+
+                <div>
+                    Full-wave rectification
+                </div>
+
+                <div>
+                    Capacitor sizing concepts
+                </div>
+
+                <div>
+                    Ripple behavior
+                </div>
+
+                <div>
+                    Linear regulation
+                </div>
+
+                <div>
+                    Load testing
+                </div>
+
+                <div>
+                    Power dissipation
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-study-footer">
+
+            <h2>
+                Project Files
+            </h2>
+
+            <div class="contact-buttons">
+
+                <a
+                    href="https://github.com/megablocks1377/AC-to-DC-Regulated-Power-Supply"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button primary-button"
+                >
+                    View GitHub
+                </a>
+
+                <a
+                    href="../index.html#projects"
+                    class="button secondary-button"
+                >
+                    Back to Portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
