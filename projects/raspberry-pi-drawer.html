@@ -1,1 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Raspberry Pi Automated Drawer System | Alan Davila</title>
+
+    <meta
+        name="description"
+        content="Dual-drawer Raspberry Pi automation system using Python, GPIO, IBT-2 motor drivers, DC motors, limit switches, GT2 belts, and timed positioning."
+    >
+
+    <link rel="stylesheet" href="../style.css?v=13">
+</head>
+
+
+<body class="project-page">
+
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                AD
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <header class="case-study-hero">
+
+        <div class="case-study-container">
+
+            <p class="section-label">
+                EMBEDDED SYSTEMS
+            </p>
+
+            <h1>
+                Raspberry Pi 4 Automated Drawer System
+            </h1>
+
+            <p class="case-study-intro">
+                A dual-drawer electromechanical automation system
+                combining Raspberry Pi GPIO control, Python software,
+                DC motors, motor drivers, limit switches, and
+                belt-driven mechanical assemblies.
+            </p>
+
+            <div class="technology-list">
+
+                <span>Python</span>
+                <span>Raspberry Pi 4</span>
+                <span>GPIO</span>
+                <span>IBT-2</span>
+                <span>DC Motors</span>
+                <span>Limit Switches</span>
+                <span>GT2 Belts</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="case-study-container">
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                PROJECT OVERVIEW
+            </p>
+
+            <h2>
+                Dual-Drawer Automation
+            </h2>
+
+            <p>
+                The project was designed to automatically move two
+                physical drawers between closed, half-open, and
+                fully-open positions.
+            </p>
+
+            <p>
+                A Raspberry Pi 4 controls the two drawer motors
+                through IBT-2 motor drivers while Python software
+                manages direction, timing, homing, and independent
+                motor states.
+            </p>
+
+
+            <div class="case-results">
+
+                <div>
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <span>
+                        Automated drawers
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        3
+                    </strong>
+
+                    <span>
+                        Position commands
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Python
+                    </strong>
+
+                    <span>
+                        Control software
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                SYSTEM ARCHITECTURE
+            </p>
+
+            <h2>
+                Hardware Design
+            </h2>
+
+            <img
+                src="../images/raspberry-pi-drawer/diagram.png"
+                alt="Raspberry Pi automated drawer system diagram"
+                class="case-image"
+            >
+
+            <p>
+                Each drawer uses a DC gearmotor and GT2 belt
+                mechanism. The Raspberry Pi provides logic-level
+                control while the IBT-2 drivers handle the higher
+                current required by the motors.
+            </p>
+
+            <p>
+                A common electrical ground allows the Raspberry Pi
+                control signals and motor-driver circuitry to
+                reference the same logic level while the motor
+                power system remains separate from the Pi supply.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                ELECTRONICS
+            </p>
+
+            <h2>
+                Wiring Bay
+            </h2>
+
+            <img
+                src="../images/raspberry-pi-drawer/wiringbay.png"
+                alt="Raspberry Pi automated drawer wiring and electronics"
+                class="case-image"
+            >
+
+            <p>
+                The system integrates a Raspberry Pi, two motor
+                drivers, motor power wiring, GPIO control wiring,
+                and the mechanical drawer assemblies.
+            </p>
+
+            <p>
+                Wiring organization and power separation were
+                important because the low-voltage control electronics
+                and higher-current motor system operate together.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                SOFTWARE
+            </p>
+
+            <h2>
+                Python Motor Controller
+            </h2>
+
+            <img
+                src="../images/raspberry-pi-drawer/code.png"
+                alt="Python code for Raspberry Pi automated drawer controller"
+                class="case-image"
+            >
+
+            <p>
+                The Python controller manages motor direction,
+                movement timing, button commands, and independent
+                drawer states.
+            </p>
+
+            <p>
+                Rather than blocking the entire program while one
+                drawer moves, the system tracks the drawers
+                independently so both motors can be controlled
+                concurrently.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                POSITIONING
+            </p>
+
+            <h2>
+                Timed Motion Control
+            </h2>
+
+            <p>
+                The system uses calibrated motor travel times to
+                approximate 0%, 50%, and 100% drawer positions.
+            </p>
+
+            <p>
+                Limit-switch homing establishes a repeatable closed
+                reference before timed position commands are used.
+            </p>
+
+            <p>
+                This approach provided a functional first-generation
+                control system while also identifying the limitations
+                of open-loop motion control.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                EVOLUTION
+            </p>
+
+            <h2>
+                What Came Next
+            </h2>
+
+            <p>
+                The limitations of time-based positioning motivated
+                the later Arduino closed-loop controller project,
+                where quadrature encoders were added to measure
+                actual motor movement.
+            </p>
+
+            <p>
+                That progression allowed the original mechanical
+                platform to become the foundation for a more precise
+                feedback-control project.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                SKILLS DEMONSTRATED
+            </p>
+
+            <h2>
+                Hardware-Software Integration
+            </h2>
+
+            <div class="takeaway-grid">
+
+                <div>
+                    Raspberry Pi GPIO
+                </div>
+
+                <div>
+                    Python control logic
+                </div>
+
+                <div>
+                    DC motor control
+                </div>
+
+                <div>
+                    Motor-driver integration
+                </div>
+
+                <div>
+                    Limit-switch homing
+                </div>
+
+                <div>
+                    Mechanical integration
+                </div>
+
+                <div>
+                    Independent motor states
+                </div>
+
+                <div>
+                    System debugging
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-study-footer">
+
+            <h2>
+                Explore More Projects
+            </h2>
+
+            <a
+                href="../index.html#projects"
+                class="button primary-button"
+            >
+                Back to Portfolio
+            </a>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
