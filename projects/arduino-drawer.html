@@ -1,1 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Arduino Closed-Loop Drawer Controller | Alan Davila</title>
+
+    <meta
+        name="description"
+        content="Arduino UNO R4 WiFi closed-loop drawer controller using quadrature encoders, limit switches, IBT-2 motor drivers, homing, and position feedback."
+    >
+
+    <link rel="stylesheet" href="../style.css?v=13">
+</head>
+
+
+<body class="project-page">
+
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                AD
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <header class="case-study-hero">
+
+        <div class="case-study-container">
+
+            <p class="section-label">
+                EMBEDDED CONTROL
+            </p>
+
+            <h1>
+                Arduino UNO R4 Closed-Loop Drawer Controller
+            </h1>
+
+            <p class="case-study-intro">
+                A dual-motor embedded control system using quadrature
+                encoder feedback, limit switches, motor drivers,
+                automatic homing, and closed-loop positioning.
+            </p>
+
+            <div class="technology-list">
+
+                <span>Arduino UNO R4 WiFi</span>
+                <span>C++</span>
+                <span>Quadrature Encoders</span>
+                <span>Limit Switches</span>
+                <span>IBT-2</span>
+                <span>PWM Motor Control</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="case-study-container">
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                PROJECT OVERVIEW
+            </p>
+
+            <h2>
+                From Timed Motion to Feedback Control
+            </h2>
+
+            <p>
+                This project upgrades the earlier Raspberry Pi
+                drawer system from timing-based positioning to
+                closed-loop motor control.
+            </p>
+
+            <p>
+                An Arduino UNO R4 WiFi monitors quadrature encoders
+                and limit switches while independently controlling
+                two DC motors through IBT-2 motor drivers.
+            </p>
+
+
+            <div class="case-results">
+
+                <div>
+
+                    <strong>
+                        2 Motors
+                    </strong>
+
+                    <span>
+                        Independently controlled
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        3 Positions
+                    </strong>
+
+                    <span>
+                        0%, 50%, and 100%
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Closed Loop
+                    </strong>
+
+                    <span>
+                        Encoder feedback
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                SYSTEM ARCHITECTURE
+            </p>
+
+            <h2>
+                Controller & Hardware
+            </h2>
+
+            <img
+                src="../images/arduino-drawer/diagram.png"
+                alt="Arduino drawer controller system architecture diagram"
+                class="case-image"
+            >
+
+            <p>
+                The Arduino receives feedback from quadrature encoders
+                and end-of-travel switches while generating the
+                direction and PWM commands used by the motor drivers.
+            </p>
+
+            <p>
+                Encoder counts provide position feedback while the
+                limit switches provide physical endpoint protection
+                and a reference for homing.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                PHYSICAL SYSTEM
+            </p>
+
+            <h2>
+                Mechanical Drawer Platform
+            </h2>
+
+            <img
+                src="../images/arduino-drawer/physdrawer.png"
+                alt="Physical closed-loop automated drawer system"
+                class="case-image"
+            >
+
+            <p>
+                The control electronics operate a mechanical drawer
+                system driven by DC gearmotors and GT2 belt-and-pulley
+                assemblies.
+            </p>
+
+            <p>
+                The controller translates requested drawer positions
+                into encoder-count targets and drives each motor until
+                the appropriate position is reached.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                TESTING & DEBUGGING
+            </p>
+
+            <h2>
+                Runtime Monitoring
+            </h2>
+
+            <img
+                src="../images/arduino-drawer/terminal.png"
+                alt="Arduino drawer controller terminal output"
+                class="case-image"
+            >
+
+            <p>
+                Serial output was used to observe system behavior
+                during testing, including motor direction, encoder
+                counts, target positions, homing behavior, and
+                limit-switch activation.
+            </p>
+
+            <p>
+                Monitoring these signals made it easier to identify
+                incorrect motor polarity, encoder direction,
+                target calibration, and endpoint behavior.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                CONTROL STRATEGY
+            </p>
+
+            <h2>
+                Closed-Loop Positioning
+            </h2>
+
+            <p>
+                Each drawer is assigned calibrated encoder-count
+                targets corresponding to closed, half-open, and
+                fully-open positions.
+            </p>
+
+            <p>
+                During movement, the controller compares the measured
+                encoder position with the requested target and selects
+                the required motor direction.
+            </p>
+
+            <p>
+                Motor speed is reduced as the drawer approaches its
+                target to improve positioning behavior and reduce
+                overshoot.
+            </p>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                SAFETY
+            </p>
+
+            <h2>
+                Homing & Endpoint Protection
+            </h2>
+
+            <div class="takeaway-grid">
+
+                <div>
+                    Automatic homing
+                </div>
+
+                <div>
+                    Limit-switch cutoff
+                </div>
+
+                <div>
+                    Safety timeouts
+                </div>
+
+                <div>
+                    Encoder monitoring
+                </div>
+
+                <div>
+                    Target-near slowdown
+                </div>
+
+                <div>
+                    Independent motor control
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="case-section">
+
+            <p class="section-label">
+                ENGINEERING TAKEAWAYS
+            </p>
+
+            <h2>
+                What This Project Demonstrates
+            </h2>
+
+            <p>
+                The project demonstrates the difference between
+                open-loop timed motion and closed-loop positioning.
+                Rather than assuming a motor reaches a location after
+                running for a fixed amount of time, the controller
+                measures actual motion through encoder feedback.
+            </p>
+
+            <p>
+                It also provided experience integrating software,
+                electrical wiring, sensors, motor drivers, and a
+                mechanical system into one control platform.
+            </p>
+
+        </section>
+
+
+        <section class="case-study-footer">
+
+            <h2>
+                Explore More Projects
+            </h2>
+
+            <a
+                href="../index.html#projects"
+                class="button primary-button"
+            >
+                Back to Portfolio
+            </a>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
